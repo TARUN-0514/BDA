@@ -1,5 +1,7 @@
 #Menu for Blood Donation system
 import sys
+from AdminHome import *
+from UserHome import *
 
 def main():
     print("************Welcome to XYZ Blood Donation System**************")
@@ -81,8 +83,8 @@ def loginUser():
         passwordIndex = userData.index(name)+1
         userPassword = userData[passwordIndex]
         if userPassword == password:
-            print("Welcome back,"+ name )
-            #userHome()
+            print("Welcome back,"+ name +"\n\n")
+            userHome()
         else:
             print("Incorrect password. Try again")
     else:
@@ -101,8 +103,8 @@ def loginAdmin():
         passwordIndex = adminData.index(name)+1
         adminPassword = adminData[passwordIndex]
         if adminPassword == password:
-            print("Welcome back admin,"+ name)
-            #adminHome()
+            print("Welcome back admin,"+ name+ "\n\n")
+            adminHome()
         else:
             print("Incorrect password. Try again")
     else:
