@@ -59,7 +59,7 @@ def blood_group(info1):
     
     bloodgroupFlag=True
     while bloodgroupFlag:
-        print("\nCHOOSE YOUR BLOOD GROUP AS GIVEN BELOW: (Enter A+ if A+) ")
+        print("\nCHOOSE YOUR BLOOD GROUP AS GIVEN BELOW:")
         choice1=input("\n1.A+ \t2.B+ \t3.O+ \t4.AB+ \t5.A- \t6.B- \t7.O- \t8.AB-\n")
         if choice1 == "1":
             bloodGroup="A+"

@@ -24,9 +24,46 @@ def userDatabase():
         print(contents)
 
 def addHospitals():
-    pass
+    while True:
+       choice = input("\n1.Add hospital \t2.Add blood camps")
+       if choice == "1":
+           addh()
+       elif choice == "2":
+           addc()
+       else:
+           print("Select only given options")
+           print("Please try again")
 
 def requestList():
-    pass
+    choice = input("Requests from user :")
+    f= open("User_Data.txt", 'r')
+    User_Data = f.read()
+    User_Data = User_Data.split()
 
+    if choice in User_Data:
+        print("Approving blood request")
+        userHome()
+    else:
+        print("Sorry invalid option")
+
+def addh():
+        choice = input("Add hospital : ")
+        f=open("hospitalinfo.txt",'r')
+        info=f.read()
+        if choice in info:
+            return "Name already exits"
+        f.close()
+        f = open("hopitalinfo.txt", 'w')
+        info = info + ""+choice +""
+        f.write(info)
+def addc():
+    choice = input("Add blood camps")
+    f=open("campsinfo.txt",'w')
+    info=f.read()
+    if choice in info:
+        return "Name already exits"
+    f.close()
+    f = open("campsinfo.txt",'w')
+    info=info + ""+choice +""
+    f.write(info)
 
