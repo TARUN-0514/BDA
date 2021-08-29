@@ -24,7 +24,7 @@ def menu():
 
         if choice == "1":
             print("Register")
-            registrationForm()
+            reg()
             register()          
         elif choice == "2":
             login()
