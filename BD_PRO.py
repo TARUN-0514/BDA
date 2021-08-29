@@ -1,4 +1,4 @@
-def main():
+def reg():
     print("FOLLOW THE STEPS FOR THE FURTHER REGISTRATION :")
 
 
