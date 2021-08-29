@@ -25,7 +25,10 @@ def menu():
 
         if choice == "1":
             print("Register")
-            reg()
+            f = open("Users_Data.txt",'r')
+            info1 = f.read()
+            f.close()
+            reg(info1)
         elif choice == "2":
             register()
         elif choice == "3":
@@ -43,14 +46,14 @@ def menu():
 
 def register():
     print("Create an account to use our application!:\n")
-    name = str(input("Name: "))
+    name = str(input("Userame(no spaces): "))
     password = str(input("Password: "))
-    f = open("User_Data.txt",'r')
+    f = open("User_Login_Data.txt",'r')
     info = f.read()
     if name in info:
         return "Name Unavailable. Please Try Again"
     f.close()
-    f = open("User_Data.txt",'w')
+    f = open("User_Login_Data.txt",'w')
     info = info + " " +name + " " + password
     f.write(info)
     
@@ -74,10 +77,10 @@ def login():
 def loginUser():
         
     print("Please enter")
-    name=str(input("Name: "))
+    name=str(input("User Name: "))
     password=str(input("Password: "))
     
-    f = open("User_Data.txt",'r')
+    f = open("User_Login_Data.txt",'r')
     userData = f.read()
     userData = userData.split()
     if name in userData:
@@ -94,7 +97,7 @@ def loginUser():
 def loginAdmin():
 
     print("Please enter details")
-    name=str(input("Name: "))
+    name=str(input("User Name: "))
     password=str(input("Password: "))
 
     f=open("Admin_Data.txt",'r')
@@ -104,7 +107,7 @@ def loginAdmin():
         passwordIndex = adminData.index(name)+1
         adminPassword = adminData[passwordIndex]
         if adminPassword == password:
-            print("Welcome back admin,"+ name+ "\n\n")
+            print("Welcome back admin,"+ name+ "\n")
             adminHome()
         else:
             print("Incorrect password. Try again")
