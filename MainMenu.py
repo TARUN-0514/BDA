@@ -2,6 +2,7 @@
 import sys
 from AdminHome import *
 from UserHome import *
+from BD_PRO import *
 
 def main():
     print("******************Welcome to XYZ Blood Donation System*******************")
@@ -23,6 +24,7 @@ def menu():
 
         if choice == "1":
             print("Register")
+            registrationForm()
             register()          
         elif choice == "2":
             login()
@@ -42,6 +44,7 @@ def menu():
 
 
 def register():
+    print("Create an account to use our application!:\n")
     name = str(input("Name: "))
     password = str(input("Password: "))
     f = open("User_Data.txt",'r')
