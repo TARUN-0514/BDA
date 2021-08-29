@@ -66,4 +66,3 @@ def addc():
     f = open("campsinfo.txt",'w')
     info=info + ""+choice +""
     f.write(info)
-
