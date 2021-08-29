@@ -2,7 +2,7 @@ def adminHome():
     #print("Here we'll display what admin can see after login")
     adminHome=True
     while adminHome:
-        choice = input(" \n1.View User Database \t2.Add Hospitals/Donation Camps\t3.Blood requests \t4.Logout\n\nPlease enter your choice: ")
+        choice = input(" \n1.View User Database \t2.Add Hospitals/Donation Camps\t3.Blood requests \t4.Blood samples collected from specific blood banks \t5.Rare blood group samples collected from differnt blood banks\t6.Logout\n\nPlease enter your choice: ")
         if choice == "1":
             userDatabase()
         elif choice == "2":
@@ -10,6 +10,10 @@ def adminHome():
         elif choice == "3":
             requestList()
         elif choice == "4":
+            sbb()
+        elif choice == "5":
+            rbsd()
+        elif choice == "6":
             break
         else:
             print("Select only given options")
@@ -66,3 +70,24 @@ def addc():
     f = open("campsinfo.txt",'w')
     info=info + ""+choice +""
     f.write(info)
+
+def sbb():
+    choice = input("Blood group from differnt hospitals", addHospitals)
+    f=open("hospitalinfo.txt", 'r')
+    info=f.read()
+    if choice in info:
+        return "Blood sample from hospital xyz is verified "
+    f.close()
+    f=open("campsinfo.txt",'r')
+    info=f.read()
+    if choice in info:
+        return "Blood sample from blood camp xyz is verified"
+    f.close()
+
+def rbsd():
+    choice = input("Rare group from specific hospitals",requestList)
+    f=open("User_Data.txt",'r')
+    info=f.read()
+    if choice in info:
+        return "Rare blood group available in our deposits"
+    f.close()
