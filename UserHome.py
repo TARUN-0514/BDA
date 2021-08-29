@@ -64,8 +64,12 @@ def searchBlood():
 
 
 def donateBlood():
-    pass
-
+    choice=input("Enter the blood group you want to donate :")
+    f=open("User_Data.txt",'a')
+    f.write(choice)
+    print("You have succefully donated your blood")
+    f.close()
+   
 def bloodList():
     print("Userdatabase: with each field seperated by a space\n")
     print(""" First  Last  Phone  Blood\n Name   Name  Number Group\n""")
