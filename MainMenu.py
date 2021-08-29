@@ -14,9 +14,9 @@ def menu():
     app=True
     while app:
         choice = input("""
-                          1: Register for an account
-                          2: Already registered? Login
-                          3: Other Blood group branches (in development)
+                          1: Registeration Form
+                          2: Register for an account
+                          3: Already registered? Login
                           4: Rare Blood group requests (in development)
                           5: Exit Application
 
@@ -25,13 +25,10 @@ def menu():
         if choice == "1":
             print("Register")
             reg()
-            register()          
         elif choice == "2":
-            login()
+            register()
         elif choice == "3":
-            
-            pass
-            #Menu option 3
+            login()
         elif choice == "4":
             
             pass
