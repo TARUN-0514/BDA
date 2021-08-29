@@ -32,8 +32,10 @@ def addHospitals():
        choice = input("\n1.Add hospital \t2.Add blood camps")
        if choice == "1":
            addh()
+           break
        elif choice == "2":
            addc()
+           break
        else:
            print("Select only given options")
            print("Please try again")
@@ -72,7 +74,7 @@ def addc():
     f.write(info)
 
 def sbb():
-    choice = input("Blood group from differnt hospitals", addHospitals)
+    choice = input("Blood group from differnt hospitals")
     f=open("hospitalinfo.txt", 'r')
     info=f.read()
     if choice in info:
@@ -85,7 +87,7 @@ def sbb():
     f.close()
 
 def rbsd():
-    choice = input("Rare group from specific hospitals",requestList)
+    choice = input("Rare group from specific hospitals")
     f=open("User_Data.txt",'r')
     info=f.read()
     if choice in info:
