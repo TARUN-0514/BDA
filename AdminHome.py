@@ -8,7 +8,7 @@ def adminHome():
         elif choice == "2":
             addHospitals()
         elif choice == "3":
-            bloodRequest()
+            requestList()
         elif choice == "4":
             break
         else:
@@ -22,5 +22,5 @@ def userDatabase():
 def addHospitals():
     pass
 
-def bloodRequest():
+def requestList():
     pass

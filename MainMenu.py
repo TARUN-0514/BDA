@@ -3,6 +3,7 @@ import sys
 from AdminHome import *
 from UserHome import *
 from BD_PRO import *
+from mail import *
 
 def main():
     print("******************Welcome to XYZ Blood Donation System*******************")
@@ -15,7 +16,7 @@ def menu():
     while app:
         choice = input("""
                           1: Registeration Form
-                          2: Register for an account
+                          2: Register for an account (Once registration form is filled)
                           3: Already registered? Login
                           4: Rare Blood group requests (in development)
                           5: Exit Application
@@ -59,7 +60,7 @@ def login():
 
     login=True
     while login:
-        choice = input(" \n\n\n1.Login as User \t2.Login as Admin\t3.Go Back\n\nPlease enter your choice: ")
+        choice = input(" \n\n1.Login as User \t2.Login as Admin\t3.Go Back\n\nPlease enter your choice: ")
         if choice == "1":
             loginUser()
         elif choice == "2":
