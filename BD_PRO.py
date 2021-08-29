@@ -1,4 +1,4 @@
-def main():
+def registrationForm():
     print("FOLLOW THE STEPS FOR THE FURTHER REGISTRATION :")
 
 

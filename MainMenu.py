@@ -4,7 +4,7 @@ from AdminHome import *
 from UserHome import *
 
 def main():
-    print("************Welcome to XYZ Blood Donation System**************")
+    print("******************Welcome to XYZ Blood Donation System*******************")
     menu()
 
 
